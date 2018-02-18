@@ -1,0 +1,26 @@
+{
+  "name": "realtime-voting",
+  "version": "1.0.0",
+  "description": "A real-time app made with React / Popmotion / NodeJS / Express / Socket.io / RethinkDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmartinezpujol/realtime-voting.git"
+  },
+  "keywords": [
+    "react",
+    "socket",
+    "node",
+    "rethinkdb",
+    "realtime"
+  ],
+  "author": "Xavier Martínez Pujol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xmartinezpujol/realtime-voting/issues"
+  },
+  "homepage": "https://github.com/xmartinezpujol/realtime-voting#readme"
+}

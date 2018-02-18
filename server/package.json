@@ -1,0 +1,20 @@
+{
+  "name": "realtime-voting-server",
+  "version": "1.0.0",
+  "description": "Server for a real-time voting app.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js --watch server"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "socket",
+    "realtime"
+  ],
+  "dependencies": {
+    "express": "^4.16.2",
+    "rethinkdb": "^2.3.3",
+    "socket.io": "^2.0.4"
+  }
+}
