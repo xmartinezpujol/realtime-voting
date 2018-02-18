@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Here goes the super dupper App</h1>
+        <h1>Here goes the super duper App</h1>
         <Results />
       </React.Fragment>
     );
