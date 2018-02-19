@@ -1,0 +1,23 @@
+# simple socketio load test
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 600
+      arrivalRate: 5
+scenarios:
+  - name: "Connect and send a bunch of likes"
+    engine: "socketio"
+    flow:
+      - loop:
+          - get:
+              url: "/like"
+          - emit:
+              channel: "connection"
+              data: ""
+          - emit:
+              channel: "like"
+              data: ""
+          - get:
+              url: "/dislike"
+          - think: 1
+        count: 50

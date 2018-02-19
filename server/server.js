@@ -1,13 +1,23 @@
-var express = require('express');
-var app = express();
-var io = require('socket.io')();
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-// app.set('port', process.env.PORT || 5000);
+app.io = io;
 
 let votes = {
   likes: 0,
   dislikes: 0,
 };
+
+app.get('/like', (req, res) => {
+  res.send('Like testing!');
+  req.app.io.emit('updateScore', updateScore('like'));
+});
+
+app.get('/dislike', (req, res) => {
+  res.send('Dislike testing!');
+  req.app.io.emit('updateScore', updateScore('dislike'));
+});
 
 io.on('connection', (client) => {
   client.on('susbscribeToVotes', () => {
@@ -25,8 +35,6 @@ io.on('connection', (client) => {
   })
 });
 
-const port = 5000;
-
 const updateScore = option => {
   if (option === 'like') {
     Object.assign({}, votes, votes.likes++);
@@ -36,10 +44,11 @@ const updateScore = option => {
   }
 };
 
-io.listen(port);
-console.log(`Listening to port ${port}`);
-
 setInterval(() => {
   io.emit('updateScore', votes);
   console.log(votes);
-}, 1000);
+}, 200);
+
+http.listen(5000, () => {
+  console.log('Listening on *:5000');
+});
