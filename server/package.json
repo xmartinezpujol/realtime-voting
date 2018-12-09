@@ -4,7 +4,9 @@
   "description": "Server for a real-time voting app.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js --watch server"
+    "start": "nodemon server.js --watch server",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "node",
@@ -16,6 +18,8 @@
     "express": "^4.16.2",
     "nodemon": "^1.15.0",
     "rethinkdb": "^2.3.3",
-    "socket.io": "^2.0.4"
-  }
+    "socket.io": "^2.0.4",
+    "snyk": "^1.116.2"
+  },
+  "snyk": true
 }
