@@ -39,7 +39,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "eslint": "^4.9.0",
+    "eslint": "^6.0.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
@@ -48,7 +48,7 @@
     "glamor": "^2.20.40",
     "glamorous": "^4.9.2",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^21.2.1",
+    "jest": "^24.0.0",
     "json-loader": "^0.5.7",
     "popmotion": "^8.1.10",
     "popmotion-react": "^2.1.0",
@@ -60,7 +60,7 @@
     "socket.io-client": "^2.0.4",
     "uglifyjs-webpack-plugin": "^1.2.0",
     "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.5.1",
+    "webpack-dev-server": "^4.8.0",
     "webpack-merge": "^4.1.0"
   }
 }
