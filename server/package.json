@@ -13,7 +13,7 @@
     "realtime"
   ],
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.19.2",
     "nodemon": "^1.15.0",
     "rethinkdb": "^2.3.3",
     "socket.io": "^2.0.4"
